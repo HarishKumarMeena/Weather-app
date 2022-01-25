@@ -7,9 +7,6 @@
 }
 
 
-
-
-
 .container {
     display: flex;
     flex-direction: row;
@@ -19,11 +16,11 @@
     color: var(--proper-black);
 }
 
-
-
-
 span {
     padding: 1.5rem;
+    background-color: white;
+    border: 2px solid white;
+    border-radius: 1rem;
 }
 
 .seprator {
@@ -69,10 +66,10 @@ button:hover {
     border: 1px solid black;
 }
 
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 900px) {
 
     .container {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 
     span {
@@ -82,10 +79,10 @@ button:hover {
     button {
         padding: 0.5rem 1rem;
     }
-  }
+}
 
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 580px) {
 
     .container {
         font-size: 1.2rem;
@@ -99,4 +96,20 @@ button:hover {
         padding: 1vh 5vw;
         font-size: medium;
     }
-  }
+}
+
+    @media only screen and (max-width: 410px) {
+
+        .container {
+            font-size: 1rem;
+        }
+
+        span {
+            padding: 0.2rem;
+        }
+
+        input {
+            padding: 1vh 5vw;
+            font-size: medium;
+        }
+    }
