@@ -7,6 +7,9 @@
 }
 
 
+
+
+
 .container {
     display: flex;
     flex-direction: row;
@@ -16,6 +19,9 @@
     color: var(--proper-black);
 }
 
+
+
+
 span {
     padding: 1.5rem;
 }
@@ -24,6 +30,7 @@ span {
     padding: 2rem;
 }
 
+
 h1 {
     text-align: center;
     font-size: 4rem;
@@ -31,7 +38,6 @@ h1 {
 }
 
 input {
-    align: center;
     padding: 1vh 5vw;
     border: 0px solid black;
     border-radius: 1rem;
@@ -62,3 +68,35 @@ button {
 button:hover {
     border: 1px solid black;
 }
+
+@media only screen and (max-width: 850px) {
+
+    .container {
+        font-size: 1.5rem;
+    }
+
+    span {
+        padding: 0.2rem;
+    }
+
+    button {
+        padding: 0.5rem 1rem;
+    }
+  }
+
+
+@media only screen and (max-width: 450px) {
+
+    .container {
+        font-size: 1.2rem;
+    }
+
+    span {
+        padding: 0.5rem;
+    }
+
+    input {
+        padding: 1vh 5vw;
+        font-size: medium;
+    }
+  }
