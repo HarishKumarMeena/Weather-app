@@ -7,6 +7,7 @@
 }
 
 
+
 .container {
     display: flex;
     flex-direction: row;
@@ -85,7 +86,7 @@ button:hover {
 @media only screen and (max-width: 580px) {
 
     .container {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     span {
