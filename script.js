@@ -6,7 +6,8 @@ var cloudDescription = document.querySelector("#cloud-description");
 var humidityLevel = document.querySelector("#humidity");
 
 document.body.style.backgroundSize = "cover";
-document.body.style.backgroundSize = "auto";
+document.body.style.objectFit = "cover";
+
 
 if (window.matchMedia("(max-width: 700px)").matches)
 {
@@ -17,6 +18,11 @@ if (window.matchMedia("(max-width: 700px)").matches)
 
 else
     document.body.style.backgroundImage = "url('images/default.jpg')";
+
+if (window.matchMedia("(min-width: 700px)").matches)
+{
+    document.body.style.backgroundSize = "auto";
+}
     
 
 var serverURL = "https://api.openweathermap.org/data/2.5/weather"
