@@ -5,12 +5,13 @@ var feelsLike = document.querySelector("#temp-feels-like");
 var cloudDescription = document.querySelector("#cloud-description");
 var humidityLevel = document.querySelector("#humidity");
 
-document.body.style.backgroundSize = "cover";
-document.body.style.objectFit = "cover";
+
 
 
 if (window.matchMedia("(max-width: 700px)").matches)
 {
+    document.body.style.backgroundSize = "cover";
+document.body.style.objectFit = "cover";
     document.body.style.backgroundImage = "url('images/default-small.jpg')";
     document.body.style.backgroundRepeat = "no-repeat";
 }
