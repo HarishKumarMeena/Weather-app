@@ -6,16 +6,18 @@ var cloudDescription = document.querySelector("#cloud-description");
 var humidityLevel = document.querySelector("#humidity");
 
 document.body.style.backgroundSize = "cover";
-document.body.style.backgroundRepeat = "no-repeat";
+document.body.style.backgroundSize = "auto";
 
 if (window.matchMedia("(max-width: 700px)").matches)
-    document.body.style.backgroundImage = "url('default-small.jpg')"; 
-
-else
-    document.body.style.backgroundImage = "url('default.jpg')";
-
+{
+    document.body.style.backgroundImage = "url('images/default-small.jpg')";
+    document.body.style.backgroundRepeat = "no-repeat";
+}
     
 
+else
+    document.body.style.backgroundImage = "url('images/default.jpg')";
+    
 
 var serverURL = "https://api.openweathermap.org/data/2.5/weather"
 
@@ -38,16 +40,16 @@ function clickHandler() {
             var temperature = json.main.temp;
             if (temperature >= 20) {
                 if (window.matchMedia("(max-width: 700px)").matches)
-                    document.body.style.backgroundImage = "url('summer-small.jpg')";
+                    document.body.style.backgroundImage = "url('images/summer-small.jpg')";
 
                 else
-                    document.body.style.backgroundImage = "url('summer.jpg')";
+                    document.body.style.backgroundImage = "url('images/summer.jpg')";
 
             } else if (temperature < 20) {
                 if (window.matchMedia("(max-width: 700px)").matches)
-                    document.body.style.backgroundImage = "url('winter-small.jpg')";
+                    document.body.style.backgroundImage = "url('images/winter-small.jpg')";
                 else
-                document.body.style.backgroundImage = "url('winter.jpg')";
+                    document.body.style.backgroundImage = "url('images/winter.jpg')";
             }
             var tempFeelsLike = json.main.feels_like;
             var clouds = json.clouds.all;
@@ -63,9 +65,5 @@ function clickHandler() {
 
 };
 
-function backgroundImage() {
-    document.body.style.backgroundColor = "#f3f3f3";
-    document.body.style.backgroundImage = "url('img_tree.png')";
-}
 
 btnTranslate.addEventListener("click", clickHandler)
