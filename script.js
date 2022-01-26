@@ -5,15 +5,15 @@ var feelsLike = document.querySelector("#temp-feels-like");
 var cloudDescription = document.querySelector("#cloud-description");
 var humidityLevel = document.querySelector("#humidity");
 
+document.body.style.backgroundSize = "cover";
+
 if (window.matchMedia("(max-width: 700px)").matches)
-{
-    document.body.style.backgroundImage = "url('default-small.jpg')";
-    document.body.style.backgroundSize = "cover";
-}
-    
+    document.body.style.backgroundImage = "url('default-small.jpg')"; 
 
 else
     document.body.style.backgroundImage = "url('default.jpg')";
+
+    
 
 
 var serverURL = "https://api.openweathermap.org/data/2.5/weather"
